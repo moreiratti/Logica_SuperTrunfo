@@ -1,0 +1,252 @@
+#include <stdio.h>
+
+int main(){
+ printf("DESAFIO SUPER TRUNFO\n");
+ printf("Aqui você irá criar as suas cartas\n");
+ printf("By: Kauan Moreira \n");
+
+ //variaveis primeira carta
+ char estado1 [10]; 
+ char codigo1 [5]; 
+ char nome1 [10];
+ unsigned long int populacao1; 
+ int Pontosturisticos1;
+ float area1;
+ float pib1;
+ float DensidadePopulacional1;
+ float PibPerCapita1;
+ float Inverso1;
+ float SuperPoder1;
+ int ResultadoPopulação, ResultadoPoder, ResultadoÁrea, ResultadoPib, ResultadoDensidadePopulacional, ResultadoPontosTuristicos, ResultadoPibPerCapita;
+
+ printf(" *** Cadastro 1 Carta *** \n");
+ 
+ printf("Digite o estado: \n");
+ scanf("%s", estado1);
+
+ printf("Digite o código (A01-HO4): \n");
+ scanf("%s", codigo1);
+ 
+ printf("Digite o nome da cidade: \n");
+ scanf("%s", nome1);
+
+ printf("Digite a população: \n");
+ scanf("%lu", &populacao1);
+
+ printf("Digite a quantidade de Pontos Turisticos: \n");
+ scanf("%d", &Pontosturisticos1);
+
+ printf("Digite a Área da cidade: \n");
+ scanf("%f", &area1);
+
+ printf("Digite O PIB: \n");
+ scanf("%f", &pib1);
+
+
+ //calculos de Densidade Populacional e Pib Per Capita
+ DensidadePopulacional1 = (float)(populacao1 / area1);
+ printf("A Densidade Populacional é: %f \n", DensidadePopulacional1);
+ PibPerCapita1 = (float)(pib1 / populacao1);
+ printf("O Pib per Capita é: %f \n", PibPerCapita1);
+
+  //calculos para Super Poder 1
+ Inverso1 = (DensidadePopulacional1 / 1 );
+ SuperPoder1 = (float)(populacao1 + area1 + pib1 + Pontosturisticos1 + PibPerCapita1 + Inverso1 );
+
+
+
+ //variaveis segunda carta
+ char estado2 [10]; 
+ char codigo2 [5]; 
+ char nome2 [10];
+ unsigned long int populacao2; 
+ int Pontosturisticos2;
+ float area2;
+ float pib2;
+ float DensidadePopulacional2;
+ float PibPerCapita2;
+ float Inverso2;
+ float SuperPoder2;
+
+  printf(" *** Cadastro 2 Carta *** \n");
+ 
+ printf("Digite o estado: \n");
+ scanf("%s", estado2);
+
+ printf("Digite o código (A01-HO4): \n");
+ scanf("%s", codigo2);
+ 
+ printf("Digite o nome da cidade: \n");
+ scanf("%s", nome2);
+
+ printf("Digite a população: \n");
+ scanf("%lu", &populacao2);
+
+ printf("Digite a quantidade de Pontos Turisticos: \n");
+ scanf("%d", &Pontosturisticos2);
+
+ printf("Digite a Área da cidade: \n");
+ scanf("%f", &area2);
+
+ printf("Digite O PIB: \n");
+ scanf("%f", &pib2);
+
+ //calculos de Densidade Populacional e Pib Per Capita
+ DensidadePopulacional2 = (float)(populacao2 / area2);
+ printf("A Densidade Populacional é: %f \n", DensidadePopulacional2);
+ PibPerCapita2 = (float)(pib2 / populacao2);
+ printf("O Pib per Capita é: %f \n", PibPerCapita2);
+
+ //calculos para Super Poder 2
+ Inverso2 =(DensidadePopulacional2 / 1 );
+ SuperPoder2 = (float)(populacao2 + area2 + pib2 + Pontosturisticos2 + PibPerCapita2 + Inverso2);
+
+  // CARTA 1 COMPLETA
+ printf(" === PRIMEIRA CARTA === \n");
+ printf("Super Poder: %f\n", SuperPoder1);
+ printf("Estado: %s\n", estado1);
+ printf("Código: %s\n", codigo1);
+ printf("Cidade: %s\n", nome1);
+ printf("População: %lu\n", populacao1);
+ printf("Pontos Turísticos: %d\n", Pontosturisticos1);
+ printf("Área: %f\n", area1);
+ printf("PIB: %f\n", pib1); 
+ printf("Densidade Populacional: %f\n", DensidadePopulacional1); 
+ printf("PIB per Capita: %f\n", PibPerCapita1); 
+ printf(" ====================== \n");
+
+ // CARTA 2 COMPLETA
+ printf(" === SEGUNDA CARTA === \n");
+ printf("Super Poder: %f\n", SuperPoder2);
+ printf("Estado: %s\n", estado2);
+ printf("Código: %s\n", codigo2);
+ printf("Cidade: %s\n", nome2);
+ printf("População: %lu\n", populacao2);
+ printf("Pontos Turísticos: %d\n", Pontosturisticos2);
+ printf("Área: %f\n", area2);
+ printf("PIB: %f\n", pib2);
+ printf("Densidade Populacional: %f\n", DensidadePopulacional2); 
+ printf("PIB per Capita: %f\n", PibPerCapita2);
+ printf(" ====================== \n");
+
+  // COMPARAÇÃO DE CARTAS 
+  printf(" ============================================================================================ \n");
+  printf(" *** Aqui irá sair o comparativo dos atributos das cartas para sabermos o ganhador *** \n");
+  printf("Atributos: Super Poder, População, PIB, Área, Densidade Populacional e Pib per Capita.\n ");
+  printf(" ============================================================================================ \n");
+
+  printf("\n ====================== \n");
+ printf("Comparativo Atibuto: Super Poder \n");
+ printf("Carta 1, Super Poder: %f\n", SuperPoder1);
+ printf("Carta 2, Super Poder: %f\n", SuperPoder2);
+ if(SuperPoder1 > SuperPoder2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+ printf(" ====================== \n");
+
+  
+
+ printf("\n===================== \n");
+  printf("Comparativo Atibuto: População \n");
+ printf("Carta1 População: %lu\n", populacao1);
+ printf("Carta 2 População: %lu\n", populacao2);
+ if (populacao1 > populacao2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+printf("===================== \n");
+
+printf("\n===================== \n");
+ printf("Comparativo Atibuto: PIB \n");
+ printf("Carta 1 PIB: %f\n", pib1); 
+ printf("Carta 2 PIB: %f\n", pib2);
+ if(pib1 > pib2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+printf("===================== \n");
+
+printf("\n===================== \n");
+  printf("Comparativo Atibuto: Área \n");
+ printf("Carta 1 Área: %f\n", area1);
+ printf("Carta 2 Área: %f\n", area2);
+ if(area1 > area2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+printf("===================== \n");
+
+printf("\n===================== \n");
+ printf("Comparativo Atibuto: Densidade Populacional \n");
+ printf("Carta 1 Densidade Populacional: %f\n", DensidadePopulacional1); 
+ printf("Carta 2 Densidade Populacional: %f\n", DensidadePopulacional2); 
+ if(DensidadePopulacional1 < DensidadePopulacional2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+printf("===================== \n");
+
+printf("\n===================== \n");
+  printf("Comparativo Atibuto: Pib per Capita \n");
+ printf("Carta 1 PIB per Capita: %f\n", PibPerCapita1);
+printf("Carta 2 PIB per Capita: %f\n", PibPerCapita2);
+ if(PibPerCapita1 > PibPerCapita2){
+    printf("Carta 1 Venceu!\n");
+ } else{
+     printf("Carta 2 Venceu!\n");
+ }
+printf("\n===================== \n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
