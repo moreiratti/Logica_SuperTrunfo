@@ -131,7 +131,7 @@ int main(){
 
   // COMPARAÇÃO DE CARTAS 
   int resultado1, resultado2, resultado3;
-  char PrimeiroAtributo, SegundoAtributo, TerceiroAtributo;
+ int PrimeiroAtributo, SegundoAtributo, TerceiroAtributo;
 
  printf("\n ======================================================================================================= \n");
  printf(" *** Comparação de Cartas *** \n");
@@ -150,7 +150,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%c", &PrimeiroAtributo);
+scanf("%d", &PrimeiroAtributo);
 
 switch (PrimeiroAtributo) {
     case 1:
@@ -192,7 +192,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%c", &SegundoAtributo);
+scanf("%d", &SegundoAtributo);
 
 if (SegundoAtributo == PrimeiroAtributo) {
     printf("Atributo já escolhido!\n");
@@ -238,7 +238,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%c", &TerceiroAtributo);
+scanf("%d", &TerceiroAtributo);
 
 // CORREÇÃO: condição mal formada
 if (TerceiroAtributo == PrimeiroAtributo || TerceiroAtributo == SegundoAtributo) {
@@ -274,59 +274,18 @@ if (TerceiroAtributo == PrimeiroAtributo || TerceiroAtributo == SegundoAtributo)
             break;
     }
 }
+ if(resultado1 && resultado2 && resultado3){
+    printf("Parabéns, jogador da Carta 1 venceu!!!\n");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} else if (
+    (resultado1 == resultado2 && resultado3 != resultado1) ||
+    (resultado1 == resultado3 && resultado2 != resultado1) ||
+    (resultado2 == resultado3 && resultado1 != resultado2)
+) {
+   printf("Parabéns, jogador da Carta 1 venceu!!!\n");
+} else {
+    printf("Parabéns, jogador da Carta 2 venceu!!!\n");
+}
 
 
 
