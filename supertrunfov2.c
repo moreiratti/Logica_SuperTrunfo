@@ -150,7 +150,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%d", &PrimeiroAtributo);
+scanf("%c", &PrimeiroAtributo);
 
 switch (PrimeiroAtributo) {
     case 1:
@@ -192,7 +192,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%d", &SegundoAtributo);
+scanf("%c", &SegundoAtributo);
 
 if (SegundoAtributo == PrimeiroAtributo) {
     printf("Atributo já escolhido!\n");
@@ -238,7 +238,7 @@ printf("4. Área\n");
 printf("5. Densidade Populacional\n");
 printf("6. Pib per Capita\n");
 printf("Escolha: ");
-scanf("%d", &TerceiroAtributo);
+scanf("%c", &TerceiroAtributo);
 
 // CORREÇÃO: condição mal formada
 if (TerceiroAtributo == PrimeiroAtributo || TerceiroAtributo == SegundoAtributo) {
