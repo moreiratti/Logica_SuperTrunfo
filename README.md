@@ -1,1 +1,1 @@
-# Logica_SuperTrunfo
+# Jogo Super Trunfo
