@@ -130,84 +130,129 @@ int main(){
  printf(" ====================== \n");
 
   // COMPARAÇÃO DE CARTAS 
-  printf(" ============================================================================================ \n");
-  printf(" *** Aqui irá sair o comparativo dos atributos das cartas para sabermos o ganhador *** \n");
-  printf("Atributos: Super Poder, População, PIB, Área, Densidade Populacional e Pib per Capita.\n ");
-  printf(" ============================================================================================ \n");
+  int escolha;
+ printf(" *** Aqui irá sair o comparativo dos atributos das cartas para sabermos o ganhador *** \n");
+ printf("Escolha um atributo de comparação para as cidades: %s e %s \n", nome1, nome2);
+ printf("1. Super Poder\n");
+ printf("2. População\n");
+ printf("3. PIB\n");
+ printf("4. Área\n");
+ printf("5. Densidade Populacional\n");
+ printf("6. Pib per Capita\n");
+ printf("Escolha: ");
+ scanf("%d", &escolha);
 
-  printf("\n ====================== \n");
- printf("Comparativo Atibuto: Super Poder \n");
- printf("Carta 1, Super Poder: %f\n", SuperPoder1);
+ switch (escolha)
+ {
+ case 1:
+   printf(" *** Super Poder *** \n ");
+    printf("Carta 1, Super Poder: %f\n", SuperPoder1);
  printf("Carta 2, Super Poder: %f\n", SuperPoder2);
+
  if(SuperPoder1 > SuperPoder2){
     printf("Carta 1 Venceu!\n");
- } else{
+ } else if (SuperPoder1 < SuperPoder2) {
      printf("Carta 2 Venceu!\n");
+ } else{ 
+ printf("Houve um empate!");
  }
- printf(" ====================== \n");
-
-  
-
- printf("\n===================== \n");
-  printf("Comparativo Atibuto: População \n");
- printf("Carta1 População: %lu\n", populacao1);
+    break;
+ case 2:
+   printf(" *** População *** \n ");
+ printf("Carta 1 População: %lu\n", populacao1);
  printf("Carta 2 População: %lu\n", populacao2);
+
  if (populacao1 > populacao2){
     printf("Carta 1 Venceu!\n");
- } else{
-     printf("Carta 2 Venceu!\n");
+ } else if (populacao1 < populacao2) {
+ printf("Carta 2 Venceu!\n");
+  } else { 
+ printf("Houve um empate!");
  }
-printf("===================== \n");
-
-printf("\n===================== \n");
- printf("Comparativo Atibuto: PIB \n");
- printf("Carta 1 PIB: %f\n", pib1); 
+    break;
+ case 3:
+   printf(" *** PIB *** \n ");
+    printf("Carta 1 PIB: %f\n", pib1); 
  printf("Carta 2 PIB: %f\n", pib2);
+
  if(pib1 > pib2){
     printf("Carta 1 Venceu!\n");
+ } else if (pib1 < pib2 ) {
+    printf("Carta 2 Venceu!\n");
  } else{
-     printf("Carta 2 Venceu!\n");
- }
-printf("===================== \n");
+     printf("Houve um empate!\n");
+}
+    break;
 
-printf("\n===================== \n");
-  printf("Comparativo Atibuto: Área \n");
- printf("Carta 1 Área: %f\n", area1);
+ case 4:
+   printf(" *** Área *** \n ");
+    printf("Carta 1 Área: %f\n", area1);
  printf("Carta 2 Área: %f\n", area2);
- if(area1 > area2){
-    printf("Carta 1 Venceu!\n");
- } else{
-     printf("Carta 2 Venceu!\n");
- }
-printf("===================== \n");
 
-printf("\n===================== \n");
- printf("Comparativo Atibuto: Densidade Populacional \n");
+ if(area1 > area2){
+   printf("Carta 1 Venceu!\n");
+ } else if (area1 < area2 ) {
+    printf("Carta 2 Venceu!\n");
+ } else{
+     printf("Houve um empate!\n");
+     } break;
+
+ case 5:
+ printf(" *** Densidade Populacional *** \n ");
  printf("Carta 1 Densidade Populacional: %f\n", DensidadePopulacional1); 
- printf("Carta 2 Densidade Populacional: %f\n", DensidadePopulacional2); 
+ printf("Carta 2 Densidade Populacional: %f\n", DensidadePopulacional2);
+
  if(DensidadePopulacional1 < DensidadePopulacional2){
     printf("Carta 1 Venceu!\n");
+ } else if (DensidadePopulacional1 > DensidadePopulacional2 ) {
+    printf("Carta 2 Venceu!\n");
  } else{
-     printf("Carta 2 Venceu!\n");
- }
-printf("===================== \n");
-
-printf("\n===================== \n");
-  printf("Comparativo Atibuto: Pib per Capita \n");
+     printf("Houve um empate!\n");
+     }
+ break;
+ case 6:
+ printf(" *** Pib per Capita *** \n ");
  printf("Carta 1 PIB per Capita: %f\n", PibPerCapita1);
-printf("Carta 2 PIB per Capita: %f\n", PibPerCapita2);
+ printf("Carta 2 PIB per Capita: %f\n", PibPerCapita2);
+
  if(PibPerCapita1 > PibPerCapita2){
     printf("Carta 1 Venceu!\n");
- } else{
-     printf("Carta 2 Venceu!\n");
+ } else if (PibPerCapita1 < PibPerCapita2 ) {    
+    printf("Carta 2 Venceu!\n");
+ } else {
+     printf("Houve um empate!\n");
  }
-printf("\n===================== \n");
+ break;
+ default:
+ printf("Opção Inválida");
+    break;
+ }
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
